@@ -1,0 +1,279 @@
+@media (max-width: 767px) {
+  /* стили для мобильных устройств */
+  .headerInstagram {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 10%;
+  }
+  .navbar a {
+    margin-bottom: 10px;
+  }
+  .about .imageT {
+   width: 80%;
+ 
+  }
+  .about .imageT .text {
+    text-align: center;
+  }
+  .about .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    margin-top: 10px;
+  }
+  .contentImg {
+    display: none;
+    background-color: #333333;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* стили для планшетов */
+  .navbar a {
+    margin-right: 20px;
+  }
+  .about .imageT {
+    flex-direction: row;
+    align-items: center;
+  }
+  .about .imageT .image {
+    margin-right: 20px;
+  }
+  .card {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  /* стили для десктопов */
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar a {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  .about .imageT {
+    flex-direction: row;
+    align-items: center;
+  }
+  .about .imageT .image {
+    margin-right: 40px;
+  }
+}
+
+span{
+    color: #FFA500;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    grid-area: h;
+    display: flex;
+    padding: 2%;
+    background: linear-gradient(to left, #FFA500 40%, #333333 40%);
+}
+
+.headerInstagram {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 15%;
+
+}
+
+.headerInstagram a {
+    margin-left: 10%;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+i {
+    color: #ffffff;
+}
+
+section{
+    background-color: #333333;
+    height: 100vh;
+}
+
+.image{
+    background-color: #FFA500;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.image img{
+    width: 100px;
+}
+
+.imageT{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 10%;
+}
+
+.text{
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.content{
+    display: flex;
+}
+
+.contentImg{
+    background-color: #FFA500;
+    width: 40%;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+.contact{
+    margin-top: 20%;
+    margin-left: 25%;
+    color: white;
+}
+
+.card svg {
+    height: 25px;
+  }
+  
+.cardLinks{
+    display: flex;
+    height: 50px
+}
+
+.card {
+    margin-top: 30%;
+    background: #e7e7e7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    width: 200px;
+}
+  
+  .card::before, .card::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.25s linear;
+    z-index: 1;
+  }
+  
+  .card::before {
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: #FFA500;
+  }
+  
+  .card::after {
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: #333333;
+  }
+  
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .card:hover span {
+    opacity: 0;
+    z-index: -3;
+  }
+  
+  .card:hover::before {
+    opacity: 0.5;
+    transform: translateY(-100%);
+  }
+  
+  .card:hover::after {
+    opacity: 0.5;
+    transform: translateY(100%);
+  }
+  
+  .card span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: 'Fira Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+  }
+  
+  .card .social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+  }
+  
+  .card .social-link svg {
+    text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+    transform: scale(1);
+  }
+  
+  .card .social-link:hover {
+    background-color: rgba(249, 244, 255, 0.774);
+    animation: bounce_613 0.4s linear;
+  }
+  
+  @keyframes bounce_613 {
+    40% {
+      transform: scale(1.4);
+    }
+  
+    60% {
+      transform: scale(0.8);
+    }
+  
+    80% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
